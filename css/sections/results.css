@@ -1,0 +1,12 @@
+.results-list { margin: 2rem 0 0; padding: 0; list-style: none; }
+.results-item .icon { width: 2rem; height: 2rem; margin-bottom: 1rem; }
+.results-title { margin: 0 0 0.5rem; font-family: var(--font-body); font-weight: 700; font-size: 1rem; text-transform: none; letter-spacing: 0; line-height: 1.3; }
+.results-item p { color: rgb(var(--muted)); }
+
+@media (min-width: 40rem) {
+  .results-list { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 64rem) {
+  .results-list { grid-template-columns: repeat(4, 1fr); }
+}

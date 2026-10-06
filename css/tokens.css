@@ -1,0 +1,22 @@
+:root {
+  --bg: 11 11 11;
+  --bg-raised: 21 21 21;
+  --text: 245 245 240;
+  --muted: 184 184 176;
+  --primary: 232 255 26;
+  --on-primary: 11 11 11;
+  --secondary: 255 106 19;
+  --primary-deep: 194 65 12;
+  --line: 42 42 42;
+  --gradient: radial-gradient(closest-side, rgb(var(--primary-deep) / 0.45), transparent);
+  --radius: 0.375rem;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --cream: 244 241 234;
+  --paper: 255 255 255;
+  --ink: 17 17 17;
+  --ink-muted: 74 74 69;
+  --ink-accent: 168 56 10;
+  --ink-line: 222 217 206;
+  --font-accent: Anton, Impact, "Arial Narrow Bold", sans-serif;
+  color-scheme: dark;
+}

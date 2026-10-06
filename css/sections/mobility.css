@@ -1,0 +1,25 @@
+.mobility { position: relative; z-index: 2; }
+.mobility-inner { display: grid; gap: 2.5rem; }
+.mobility .section-title { max-width: 14ch; }
+.mobility-tasks-media, .mobility-media { margin: 0; display: grid; justify-items: center; }
+.mobility-tasks { width: 100%; max-width: 18rem; transform: rotate(-8deg); filter: drop-shadow(0 1.5rem 2rem rgb(0 0 0 / 0.45)); }
+.mobility-phone { width: 100%; max-width: 16rem; transform: rotate(4deg); filter: drop-shadow(0 1.5rem 2rem rgb(var(--ink) / 0.25)); }
+.mobility .mark { white-space: nowrap; }
+.mobility-tasks-media { order: 3; }
+.mobility-media { order: 2; }
+
+@media (min-width: 48rem) {
+  .mobility-inner { grid-template-columns: 7fr 5fr; gap: 2.5rem; align-items: center; }
+  .mobility-tasks-media { grid-column: 1 / -1; }
+  .mobility-phone { max-width: 18rem; }
+}
+
+@media (min-width: 64rem) {
+  .mobility { padding: 0; margin-top: -1px; }
+  .mobility-inner { position: relative; grid-template-columns: min(38%, 31rem) minmax(0, 1fr) min(17rem, 22%); gap: 2.5rem; align-items: end; }
+  .mobility-tasks-media { position: absolute; left: 0; bottom: 0; width: min(38%, 31rem); margin: 0; }
+  .mobility-tasks { max-width: none; transform: none; }
+  .mobility-text { grid-column: 2; align-self: start; padding: 1.5rem 0 2.5rem; }
+  .mobility-media { grid-column: 3; order: 2; align-self: end; margin-top: -9rem; justify-items: end; }
+  .mobility-phone { max-width: 17rem; transform: none; }
+}

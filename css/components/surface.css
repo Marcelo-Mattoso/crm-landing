@@ -1,0 +1,10 @@
+.surface-light {
+  --text: var(--ink);
+  --muted: var(--ink-muted);
+  --secondary: var(--ink-accent);
+  --line: var(--ink-line);
+  --bg-raised: var(--paper);
+  background: rgb(var(--cream));
+  color: rgb(var(--text));
+}
+.surface-light :focus-visible { outline-color: rgb(var(--ink)); }

@@ -1,0 +1,20 @@
+.pricing .section-title { max-width: 22ch; }
+.pricing .accent-primary { white-space: nowrap; }
+.plan-features { gap: 0.5rem; }
+.plan-features .icon { margin-bottom: 0; }
+.pricing-list { gap: 1.75rem; margin-top: 2.5rem; }
+.plan { display: flex; flex-direction: column; position: relative; }
+.plan-name { margin: 0 0 0.5rem; font-family: var(--font-body); font-weight: 700; font-size: 1.25rem; text-transform: none; letter-spacing: 0; line-height: 1.3; }
+.plan-for { margin: 0 0 1rem; font-size: 0.875rem; color: rgb(var(--muted)); }
+.plan-price { margin: 0 0 1.25rem; }
+.plan-amount { font-family: var(--font-accent); font-size: 2.5rem; color: rgb(var(--text)); }
+.plan-period { color: rgb(var(--muted)); }
+.plan-features { margin-bottom: 1.5rem; color: rgb(var(--muted)); }
+.plan-action { margin-top: auto; width: 100%; }
+.plan-featured { border: 2px solid rgb(var(--primary)); }
+.plan-flag { position: absolute; top: 0; right: 1.25rem; transform: translateY(-50%); margin: 0; padding: 0.25rem 0.5rem; border-radius: 0.25rem; background: rgb(var(--primary)); color: rgb(var(--on-primary)); font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+
+@media (min-width: 56.25rem) {
+  .pricing-list { grid-template-columns: repeat(3, 1fr); }
+  .plan-for { line-height: 1.5; min-height: 3em; }
+}

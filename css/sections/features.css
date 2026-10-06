@@ -1,0 +1,14 @@
+.features-text { display: flex; flex-direction: column; align-items: flex-start; }
+.features .section-title { max-width: 12ch; }
+.features-list { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem 1rem; }
+.features .feature-title { margin: 0.75rem 0 0.25rem; font-family: var(--font-body); font-weight: 700; font-size: 1rem; text-transform: none; letter-spacing: 0; line-height: 1.3; }
+.features .feature-item p { margin: 0; font-size: 0.875rem; color: rgb(var(--muted)); }
+
+@media (min-width: 48rem) {
+  .features-list { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 64rem) {
+  .features-inner { display: grid; grid-template-columns: 5fr 7fr; gap: 3rem; align-items: center; }
+  .features-list { margin-top: 0; }
+}

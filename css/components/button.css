@@ -1,0 +1,63 @@
+.button {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 3rem;
+  padding: 0.875rem 1.5rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.button-primary { background: rgb(var(--primary)); color: rgb(var(--on-primary)); }
+.button-primary:hover { box-shadow: 0 0 0 4px rgb(var(--primary) / 0.18); }
+.button-dark { background: rgb(var(--ink)); color: rgb(var(--cream)); }
+.button-dark:hover { box-shadow: 0 0 0 4px rgb(var(--ink) / 0.15); }
+.button-secondary { background: none; border-color: rgb(var(--muted)); color: rgb(var(--text)); }
+.button-secondary:hover { border-color: rgb(var(--primary)); }
+.button-label { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; }
+.button-label .icon { width: 1.25rem; height: 1.25rem; color: inherit; }
+.button-label .icon-arrow { width: 1rem; height: 1rem; }
+.button-note { font-size: 0.75rem; font-weight: 400; }
+.button-link { font-weight: 600; }
+.button-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  align-self: flex-start;
+  padding: 0.5rem 0;
+  background: none;
+  border: 0;
+  color: rgb(var(--text));
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+}
+.button-ghost .icon-ring {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 2px solid rgb(var(--text));
+  border-radius: 50%;
+}
+.button-ghost .icon-ring .icon { width: 1.25rem; height: 1.25rem; }
+.button-ghost:hover .icon-ring { border-color: rgb(var(--primary)); }
+.button-ghost:hover .button-ghost-text { text-decoration: underline; text-decoration-color: rgb(var(--primary)); text-decoration-thickness: 1px; text-underline-offset: 0.25em; }
+
+@media (min-width: 48rem) {
+  .button-ghost { align-self: auto; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .button { transition: box-shadow 0.15s; }
+  .button-label .icon-arrow { transition: transform 0.15s; }
+  .button-primary:hover .icon-arrow, .button-dark:hover .icon-arrow { transform: translateX(0.25rem); }
+  .button-ghost .icon-ring { transition: border-color 0.15s; }
+}

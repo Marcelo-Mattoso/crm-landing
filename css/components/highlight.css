@@ -1,0 +1,24 @@
+.mark {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+  background: none;
+  padding: 0 0.12em;
+  margin: -0.02em -0.04em 0.04em;
+  color: rgb(var(--on-primary));
+}
+.mark::before {
+  content: "";
+  position: absolute;
+  inset: -0.01em -0.1em -0.04em;
+  z-index: -1;
+  background: rgb(var(--primary));
+  clip-path: polygon(3% 0, 97% 0, 99% 14%, 96% 30%, 100% 47%, 97% 63%, 99% 81%, 96% 100%, 4% 100%, 1% 84%, 3% 66%, 0 50%, 2% 33%, 0 16%);
+}
+.accent-primary { color: rgb(var(--primary)); }
+.accent { color: rgb(var(--secondary)); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .mark::before { transform-origin: left; animation: mark-paint 0.6s ease-out 0.2s both; }
+  @keyframes mark-paint { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+}
