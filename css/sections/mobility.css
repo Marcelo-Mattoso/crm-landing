@@ -1,4 +1,4 @@
-.mobility { position: relative; z-index: 2; }
+.mobility { position: relative; z-index: 2; margin-top: -1px; }
 .mobility-inner { display: grid; gap: 2.5rem; }
 .mobility .section-title { max-width: 14ch; }
 .mobility-tasks-media, .mobility-media { margin: 0; display: grid; justify-items: center; }
