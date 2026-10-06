@@ -52,7 +52,7 @@ test('every img has alt', () => {
 test('internal links and stylesheets resolve', () => {
   for (const page of pages) {
     const html = readFileSync(page, 'utf8');
-    for (const [, href] of html.matchAll(/(?:href|src)="([^"]*)"/g)) {
+    for (const [, href] of html.replace(/<base [^>]*>/, "").matchAll(/(?:href|src)="([^"]*)"/g)) {
       if (/^(https?:|mailto:|tel:|#$)/.test(href)) continue;
       const [file, hash] = href.split('#');
       const target = file ? resolve(dirname(page), file) : page;
