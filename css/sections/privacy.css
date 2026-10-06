@@ -1,3 +1,22 @@
-.privacy-inner { max-width: 42rem; }
-.privacy-index { margin: 0 0 2rem; }
-.privacy-inner h2 { margin-top: 2rem; font-size: 1.75rem; }
+.privacy-head { position: relative; overflow: hidden; margin-top: -4.5rem; padding: 8rem 0 3rem; border-bottom: 1px solid rgb(var(--line)); background: radial-gradient(60% 120% at 100% 0%, rgb(var(--primary-deep) / 0.45), transparent 70%), rgb(var(--bg)); }
+.privacy-title { font-size: clamp(2.75rem, 1.5rem + 5vw, 5.5rem); line-height: 0.95; margin: 0 0 1.25rem; max-width: 14ch; }
+.privacy-lead { max-width: 36rem; margin: 0; color: rgb(var(--muted)); font-size: 1.125rem; }
+.privacy-inner { display: grid; gap: 2rem; }
+.privacy-index ol { counter-reset: privacy; list-style: none; margin: 0; padding: 1.25rem; display: grid; gap: 0.25rem; background: rgb(var(--bg-raised)); border: 1px solid rgb(var(--line)); border-radius: var(--radius); }
+.privacy-index li { counter-increment: privacy; }
+.privacy-index a { display: flex; gap: 0.75rem; align-items: baseline; padding: 0.5rem 0.25rem; color: rgb(var(--text)); text-decoration: none; }
+.privacy-index a::before { content: counter(privacy, decimal-leading-zero); font-size: 0.75rem; font-weight: 600; color: rgb(var(--primary)); }
+.privacy-index a:hover { color: rgb(var(--primary)); }
+.privacy-body { counter-reset: privacy-item; display: grid; gap: 1rem; }
+.privacy-item { counter-increment: privacy-item; scroll-margin-top: 6rem; padding: 1.5rem; background: rgb(var(--bg-raised)); border: 1px solid rgb(var(--line)); border-left: 3px solid rgb(var(--primary)); border-radius: var(--radius); }
+.privacy-item h2 { display: flex; gap: 1rem; align-items: baseline; margin: 0; font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); }
+.privacy-item h2::before { content: counter(privacy-item, decimal-leading-zero); font-size: 0.875em; color: rgb(var(--secondary)); }
+.privacy-item p:empty { display: none; }
+.privacy-item p { margin: 1rem 0 0; color: rgb(var(--muted)); max-width: 42rem; }
+
+@media (min-width: 56.25rem) {
+  .privacy-head { margin-top: -6rem; padding: 10rem 0 4rem; }
+  .privacy-inner { grid-template-columns: 18rem minmax(0, 1fr); gap: 3rem; align-items: start; }
+  .privacy-index { position: sticky; top: 6.5rem; }
+  .privacy-item { padding: 2rem; }
+}
